@@ -1,5 +1,5 @@
 /**
- * <%= filename %> hook
+ * <%= id %> hook
  */
 
 module.exports = function (sails) {
