@@ -1,8 +1,8 @@
 {
   "name": "sails-generate-hook",
-  "version": "0.10.0",
-  "description": "sails generate hook",
-  "main": "Generator.js",
+  "version": "0.0.0",
+  "description": "Generate a hook for Sails.",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },

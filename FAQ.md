@@ -12,7 +12,6 @@ $ npm install sails-generate-hook
 [![NPM](https://nodei.co/npm/sails-generate-hook.png?downloads=true&stars=true)](https://nodei.co/npm/sails-generate-hook/)
 
 
-
 ### Where is the documentation?
 + Documentation for this module is in the README.md file.
 + [Docs for the latest stable npm release of Sails are on the website](http://sailsjs.org/#!documentation)
@@ -65,7 +64,6 @@ Most of the time, when PRs don't get merged, a scarcity of time is to blame.  I 
 The best thing about maintaining lots of small modules is that it's trivial to override any one of them on their own.  If you need some changes merged, please feel empowered to fork this model and release your own version.
 
 If you feel that yours is the better approach, and should be the default, share it with the community via IRC, Twitter, Google Groups, etc.  Also, feel free to let the core Sails/Waterline team know and we'll take it into consideration.
-
 
 
 ### More questions?
