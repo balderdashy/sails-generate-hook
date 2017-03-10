@@ -7,7 +7,11 @@ var util = require('util');
 var _ = require('lodash');
 var defaultsDeep = require('merge-defaults');
 
-
+function isType(type){
+  return function(arg) {
+    return arg===type;
+  }
+}
 
 /**
  * sails-generate-hook
@@ -63,6 +67,28 @@ module.exports = {
     // Decide the output id for use in targets below:
     scope.id = scope.args[0];
 
+    if(scope.args.findIndex(isType('i'))===-1){      
+      scope.id = "api/hooks/"+scope.args[0];
+    }
+
+    if(scope.args.findIndex(isType('d'))===-1){
+      scope.defaults = "//defaults: {},\n";
+    }else{
+      scope.defaults = "defaults: {},\n";      
+    }
+
+    if(scope.args.findIndex(isType('c'))===-1){
+      scope.configure = "//configure: function(){},\n";
+    }else{
+      scope.configure = "configure: function(){},\n";      
+    }
+
+    if(scope.args.findIndex(isType('r'))===-1){
+      scope.routes = "//routes: {\n      //before: {},\n      //after: {},\n    //}\n";
+    }else{
+      scope.routes = "routes: {\nbefore:{},\nafter:{},\n}\n";      
+    }
+
     // When finished, we trigger a callback with no error
     // to begin generating files/folders as specified by
     // the `targets` below.
@@ -77,7 +103,7 @@ module.exports = {
    */
 
   targets: {
-    './api/hooks/:id/index.js': { template: 'hook.template.js' }
+    './:id/index.js': { template: 'hook.template.js' }
   },
 
 

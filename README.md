@@ -18,16 +18,16 @@ $ npm install sails-generate-hook
 ##### On the command line
 
 ```sh
-$ sails generate hook hookName [-i -d -c -r]
+$ sails generate hook hookName [i d c r]
 ```
 
-* **-i**
+* **i**
   * Installable hook, proyecto hook by default.
-* **-d**
+* **d**
   * With default field.
-* **-c**
+* **c**
   * With configure field.
-* **-r**
+* **r**
   * With routes field.
 
 
