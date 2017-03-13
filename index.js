@@ -86,7 +86,7 @@ module.exports = {
     if(scope.args.findIndex(isType('r'))===-1){
       scope.routes = "//routes: {\n      //before: {},\n      //after: {},\n    //}\n";
     }else{
-      scope.routes = "routes: {\nbefore:{},\nafter:{},\n}\n";      
+      scope.routes = "routes: {\n      before:{},\n      after:{},\n    }\n";      
     }
 
     // When finished, we trigger a callback with no error
